@@ -24,6 +24,7 @@ export default function Footer() {
           <Heart className="w-4 h-4 mx-1 text-red-500 fill-red-500" />
           <span>by</span>
           <span className="ml-1 text-gray-300">Diana Benish</span>
+          <span className="mx-2">{new Date().getFullYear()}</span>
         </p>
       </div>
     </footer>
