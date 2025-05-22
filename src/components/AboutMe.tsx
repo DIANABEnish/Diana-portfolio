@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaCode, FaBullseye } from 'react-icons/fa';
+import { FaCode } from 'react-icons/fa';
 import { FaFigma } from 'react-icons/fa6';
 import { motion } from 'framer-motion';
 
