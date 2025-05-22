@@ -19,7 +19,7 @@ export default function ProjectsSection() {
       title: 'Sports Wear E-Commerce Platform',
       description: 'A sleek and responsive multipage sportswear website showcasing stylish and functional athletic apparel.',
       tags: ['TypeScript', 'HTML', 'SCSS', 'Responsive Design'],
-      imageUrl: '/src/assets/images/sportswearProject.png',
+      imageUrl: '/images/sportswearProject.png',
       demoUrl: 'https://elevatesport7.netlify.app/',
       linkedinUrl: 'https://www.linkedin.com/posts/dianabenish_webdevelopment-frontenddeveloper-javascriptprojects-activity-7304793911925903361-Gjoj'
     },
@@ -28,7 +28,7 @@ export default function ProjectsSection() {
       title: 'Amazon Clone E-Commerce Platform',
       description: 'Amazon-inspired shopping platform with full purchase flow and order tracking',
       tags: ['JavaScript', 'HTML5', 'CSS3', 'Responsive Design'],
-      imageUrl: '/src/assets/images/amazonProject.png',
+      imageUrl: '/images/amazonProject.png',
       demoUrl: 'https://a-rivershop.netlify.app/amazon',
       linkedinUrl: 'https://www.linkedin.com/posts/dianabenish_webdevelopment-frontenddeveloper-javascriptprojects-activity-7304793911925903361-Gjoj'
     },
@@ -37,7 +37,7 @@ export default function ProjectsSection() {
       title: 'Volunteers in the Field Full Stack',
       description: 'Interactive platform connecting farmers with volunteers through dynamic mapping technology',
       tags: ['React', 'Node.js', 'MongoDB', 'Material UI', 'Leaflet'],
-      imageUrl: '/src/assets/images/volunteerProject.png',
+      imageUrl: '/images/volunteerProject.png',
       demoUrl: 'https://mitnadvimbil.netlify.app/',
       linkedinUrl: 'https://www.linkedin.com/posts/dianabenish_webdevelopment-fullstack-frontend-activity-7292822500390899714-BWV-'
     }
