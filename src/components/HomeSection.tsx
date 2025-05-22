@@ -16,7 +16,7 @@ export default function HomeSection() {
             </span>
           </h1>
           <h2 className="text-2xl md:text-3xl text-gray-400 mb-8">
-            Hey, I'm Diana.
+              Front-End Developer
           </h2>
         </motion.div>
 
@@ -26,9 +26,7 @@ export default function HomeSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-        A Front-End Developer bringing digital ideas to life.
-
-       I create clean, thoughtful websites that are visually engaging and feel intuitive across all devices. My approach balances visual design with practical functionality, focusing on what truly matters to users.
+          I bring digital ideas to life. I create clean, thoughtful websites that are visually engaging and feel intuitive across all devices. My approach balances visual design with practical functionality, focusing on what truly matters to users.
 
         </motion.p>
 
