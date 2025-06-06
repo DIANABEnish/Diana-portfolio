@@ -40,6 +40,15 @@ export default function ProjectsSection() {
       imageUrl: '/images/volunteerProject.png',
       demoUrl: 'https://mitnadvimbil.netlify.app/',
       linkedinUrl: 'https://www.linkedin.com/posts/dianabenish_webdevelopment-fullstack-frontend-activity-7292822500390899714-BWV-'
+    },
+        {
+      id: 4,
+      title: 'Enterior Design Landing Page',
+      description: 'A responsive frontend project featuring clean, aesthetic design for an interior designers website. This modern landing page emphasizes elegant visual presentation and smooth user experience',
+      tags: ['React', 'Typescript', 'CSS'],
+      imageUrl: '/images/landingPageMockup.PNG',
+      demoUrl: 'https://landingpagemc.netlify.app/',
+      linkedinUrl: 'https://www.linkedin.com/in/dianabenish/'
     }
  
   ]
