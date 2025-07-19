@@ -49,8 +49,18 @@ export default function ProjectsSection() {
       imageUrl: '/images/landingPageMockup.PNG',
       demoUrl: 'https://landingpagemc.netlify.app/',
       linkedinUrl: 'https://www.linkedin.com/in/dianabenish/'
-    }
- 
+    },
+  {
+     id: 5,
+      title: 'Trip Vibe - Travel Booking Website',
+      description: 'A single-page travel agency website showcasing destinations, packages, and travel services.',
+      tags: ['HTML', 'CSS', 'Bootstrap'],
+      imageUrl: '/images/tripvibe.png', 
+      demoUrl: 'https://tripvibes.netlify.app/',
+      linkedinUrl: 'https://www.linkedin.com/in/dianabenish/'
+  }
+
+     
   ]
 
   return (
