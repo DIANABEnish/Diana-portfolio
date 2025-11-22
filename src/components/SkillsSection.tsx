@@ -35,8 +35,8 @@ export default function SkillsSection() {
     {
       name: 'Tools & Methodologies',
       skills: [
-        { name: 'Git', level: 85 },
-        { name: 'Figma', level: 70 },
+        { name: 'Git/GitHub', level: 95 },
+        { name: 'Figma', level: 60 },
         { name: 'Agile Development', level: 75 }
       ]
     }
@@ -50,7 +50,7 @@ export default function SkillsSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-100">
@@ -69,7 +69,7 @@ export default function SkillsSection() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: catIndex * 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               className="bg-gray-800 rounded-xl p-6 hover:shadow-lg hover:shadow-primary-500/10 transition-all duration-300"
             >
               <h3 className="text-2xl font-semibold mb-6 text-center text-gray-200">
