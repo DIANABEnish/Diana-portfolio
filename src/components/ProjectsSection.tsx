@@ -83,16 +83,18 @@ export default function ProjectsSection() {
     }
   }
 
-  // Card animation - רק opacity, ללא scale/y
+  // Card animation - translateY + opacity (לא scale!)
   const cardVariants = {
     hidden: { 
-      opacity: 0
+      opacity: 0,
+      y: 30 // מתחיל 30px למטה
     },
     visible: { 
       opacity: 1,
+      y: 0, // חוזר למקום
       transition: {
-        duration: 0.5,
-        ease: "easeOut"
+        duration: 0.6,
+        ease: [0.25, 0.1, 0.25, 1] // easing חלק
       }
     }
   }
@@ -102,9 +104,9 @@ export default function ProjectsSection() {
       <div className="container mx-auto px-4">
         {/* Title */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.3 }}
           className="text-center mb-16"
         >
@@ -122,16 +124,15 @@ export default function ProjectsSection() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.05 }}
         >
           {projects.map((project) => (
             <motion.div
               key={project.id}
               variants={cardVariants}
-              className="bg-gray-800 rounded-xl overflow-hidden hover:shadow-lg hover:shadow-primary-500/10 transition-shadow duration-300 flex flex-col"
+              className="bg-gray-800 rounded-xl overflow-hidden hover:shadow-lg hover:shadow-primary-500/10 transition-shadow duration-300 flex flex-col will-change-transform"
               style={{ 
-                minHeight: '550px',
-                transform: 'translateZ(0)'
+                minHeight: '550px'
               }}
             >
               {/* Project Image */}
@@ -185,7 +186,7 @@ export default function ProjectsSection() {
 
                 {/* Action Buttons */}
                 <div className="flex space-x-4 mt-auto">
-                  <a
+                  
                     href={project.demoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -195,7 +196,7 @@ export default function ProjectsSection() {
                     <span>Live Demo</span>
                   </a>
                   {project.linkedinUrl && (
-                    <a
+                    
                       href={project.linkedinUrl}
                       target="_blank"
                       rel="noopener noreferrer"
