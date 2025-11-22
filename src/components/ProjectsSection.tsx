@@ -13,8 +13,7 @@ interface Project {
 
 export default function ProjectsSection() {
   const projects: Project[] = [
-    
-       {
+    {
       id: 1,
       title: 'Sports Wear E-Commerce Platform',
       description: 'A sleek and responsive multipage sportswear website showcasing stylish and functional athletic apparel.',
@@ -41,7 +40,26 @@ export default function ProjectsSection() {
       demoUrl: 'https://mitnadvimbil.netlify.app/',
       linkedinUrl: 'https://www.linkedin.com/posts/dianabenish_webdevelopment-fullstack-frontend-activity-7292822500390899714-BWV-'
     },
-     { id: 4,
+    {
+      id: 4,
+      title: 'Enterior Design Landing Page',
+      description: 'A responsive frontend project featuring clean, aesthetic design for an interior designers website. This modern landing page emphasizes elegant visual presentation and smooth user experience',
+      tags: ['React', 'Typescript', 'CSS'],
+      imageUrl: '/images/landingPageMockup.PNG',
+      demoUrl: 'https://landingpagemc.netlify.app/',
+      linkedinUrl: 'https://www.linkedin.com/in/dianabenish/'
+    },
+    {
+      id: 5,
+      title: 'Trip Vibe - Travel Booking Website',
+      description: 'A single-page travel agency website showcasing destinations, packages, and travel services.',
+      tags: ['HTML', 'CSS', 'Bootstrap'],
+      imageUrl: '/images/tripvibe.png',
+      demoUrl: 'https://tripvibes.netlify.app/',
+      linkedinUrl: 'https://www.linkedin.com/in/dianabenish/'
+    },
+    {
+      id: 6,
       title: 'Clearly - Skin Analysis & Personalized Skincare App',
       description: `A three-month collaborative project with a team of 10 developers, 
                     building an application that analyzes facial skin and provides 
@@ -52,38 +70,42 @@ export default function ProjectsSection() {
       imageUrl: '/images/Clearly-mockap.png',
       demoUrl: '/videos/Clearly_demo.mp4',
       linkedinUrl: ''
-
-    },
-  {
-     id: 5,
-      title: 'Trip Vibe - Travel Booking Website',
-      description: 'A single-page travel agency website showcasing destinations, packages, and travel services.',
-      tags: ['HTML', 'CSS', 'Bootstrap'],
-      imageUrl: '/images/tripvibe.png',
-      demoUrl: 'https://tripvibes.netlify.app/',
-      linkedinUrl: 'https://www.linkedin.com/in/dianabenish/'
-  },
-
-         {
-      id: 6,
-      title: 'Enterior Design Landing Page',
-      description: 'A responsive frontend project featuring clean, aesthetic design for an interior designers website. This modern landing page emphasizes elegant visual presentation and smooth user experience',
-      tags: ['React', 'Typescript', 'CSS'],
-      imageUrl: '/images/landingPageMockup.PNG',
-      demoUrl: 'https://landingpagemc.netlify.app/',
-      linkedinUrl: 'https://www.linkedin.com/in/dianabenish/'
     }
   ]
+
+  // Container animation
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  }
+
+  // Card animation - רק opacity, ללא scale/y
+  const cardVariants = {
+    hidden: { 
+      opacity: 0
+    },
+    visible: { 
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  }
 
   return (
     <section id="projects" className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">
         {/* Title */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true, margin: "-100px"  }}
+          viewport={{ once: true, amount: 0.3 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-100">
@@ -95,28 +117,43 @@ export default function ProjectsSection() {
         </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
+          {projects.map((project) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              className="bg-gray-800 rounded-xl overflow-hidden hover:shadow-lg hover:shadow-primary-500/10 transition-all duration-300 h-full flex flex-col"
-              style={{ minHeight: '500px' }} //minimum hight
+              variants={cardVariants}
+              className="bg-gray-800 rounded-xl overflow-hidden hover:shadow-lg hover:shadow-primary-500/10 transition-shadow duration-300 flex flex-col"
+              style={{ 
+                minHeight: '550px',
+                transform: 'translateZ(0)'
+              }}
             >
               {/* Project Image */}
-              <div className="relative group h-48 overflow-hidden"
-                  style={{ height: '200px' }}>
+              <div 
+                className="relative group overflow-hidden bg-gray-700"
+                style={{ 
+                  height: '220px',
+                  minHeight: '220px',
+                  flexShrink: 0
+                }}
+              >
                 <img
                   src={project.imageUrl}
                   alt={project.title}
-                  loading="lazy" //  lazy loading
-                  width="400" 
-                  height="200" 
+                  loading="lazy"
+                  width="400"
+                  height="220"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  style={{ aspectRatio: '2/1' }}
+                  style={{ 
+                    aspectRatio: '400/220',
+                    display: 'block'
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                   <h3 className="text-xl font-semibold text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
@@ -127,15 +164,19 @@ export default function ProjectsSection() {
 
               {/* Project Content */}
               <div className="p-6 flex-1 flex flex-col">
-                <h3 className="text-xl font-semibold mb-2 text-gray-200">{project.title}</h3>
-                <p className="text-gray-400 mb-4 flex-1">{project.description}</p>
+                <h3 className="text-xl font-semibold mb-2 text-gray-200">
+                  {project.title}
+                </h3>
+                <p className="text-gray-400 mb-4 flex-1">
+                  {project.description}
+                </p>
                 
                 {/* Technology Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map(tag => (
                     <span 
                       key={tag}
-                      className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300"
+                      className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300 h-fit"
                     >
                       {tag}
                     </span>
@@ -153,20 +194,22 @@ export default function ProjectsSection() {
                     <ExternalLink className="w-4 h-4" />
                     <span>Live Demo</span>
                   </a>
-                  <a
-                    href={project.linkedinUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center space-x-2 text-gray-400 hover:text-gray-300 transition-colors"
-                  >
-                    <Linkedin className="w-4 h-4" />
-                    <span>Linkedin Post</span>
-                  </a>
+                  {project.linkedinUrl && (
+                    <a
+                      href={project.linkedinUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 text-gray-400 hover:text-gray-300 transition-colors"
+                    >
+                      <Linkedin className="w-4 h-4" />
+                      <span>LinkedIn Post</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )
