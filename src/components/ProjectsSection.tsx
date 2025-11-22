@@ -186,7 +186,7 @@ export default function ProjectsSection() {
 
                 {/* Action Buttons */}
                 <div className="flex space-x-4 mt-auto">
-                  
+                  <a
                     href={project.demoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -196,7 +196,7 @@ export default function ProjectsSection() {
                     <span>Live Demo</span>
                   </a>
                   {project.linkedinUrl && (
-                    
+                    <a
                       href={project.linkedinUrl}
                       target="_blank"
                       rel="noopener noreferrer"
