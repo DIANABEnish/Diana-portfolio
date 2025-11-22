@@ -26,8 +26,11 @@ const AboutMe = () => {
       subtitle: 'Crafting Digital Experiences through Technology',
       icon: <FaCode className="text-xl text-primary-500" />,
       content: {
-        heading: 'Transforming Ideas into Interactive Realities',
-        text: 'Code is my language of innovation, where each line represents a bridge between imagination and functionality. I approach software development as a creative process, meticulously crafting components that not only solve complex problems but also tell a compelling story. My passion lies in developing elegant, efficient solutions that transform user interactions into seamless, intuitive experiences.'
+        heading: 'Building Reliable, User-Focused Web Applications',
+        text: `I love solving real problems through code and creating web experiences that feel simple and friendly.
+                My work across the stack with React, Node.js, Express, and MongoDB allows me to build features end-to-end - from the UI the user sees to the logic that powers it.
+                I care about clean structure, readable code, and building things that last.`
+
       }
     },
     {
@@ -36,8 +39,11 @@ const AboutMe = () => {
       subtitle: 'Bridging Aesthetics with User-Centered Thinking',
       icon: <FaFigma className="text-xl text-secondary-500" />,
       content: {
-        heading: 'Designing Beyond the Surface',
-        text: 'Design is the art of solving problems through visual and interactive storytelling. I believe in a holistic approach that goes beyond mere aesthetics, focusing on understanding user needs, behaviors, and emotions. Each design is a carefully orchestrated journey, blending research, empathy, and creative thinking to create interfaces that are not just visually striking, but truly meaningful and user-centric.'
+        heading: 'Designing Interfaces That Make Sense',
+        text: `For me, design is about clarity and making the experience effortless for the user.
+                I focus on hierarchy, simplicity, and interactions that guide users naturally through a product.
+                Whether I'm refining components, improving flow, or making UI decisions in React, I aim to create interfaces that feel clean, intuitive, and welcoming - without visual noise.
+                This mindset helps me build products that are not only functional but also pleasant to use.`
       }
     }
 ];
@@ -56,7 +62,7 @@ const AboutMe = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-50px" }}
         >
           <h2 className="text-4xl font-bold mb-4 text-gray-100">
             About Me
@@ -81,7 +87,7 @@ const AboutMe = () => {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
+                 viewport={{ once: true, margin: "-50px" }}
               >
                 <div>
                   <h3 className="text-xl font-semibold mb-1">{tab.title}</h3>
@@ -100,7 +106,7 @@ const AboutMe = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
+             viewport={{ once: true, margin: "-50px" }}
           >
             <h3 className="text-2xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-500">
               {activeContent?.heading}
