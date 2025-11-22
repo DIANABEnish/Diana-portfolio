@@ -10,14 +10,15 @@ export default function HomeSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold mb-4">
+          <h1 className="text-5xl md:text-7xl font-regular mb-4">
             <span className="bg-gradient-to-r from-primary-500 to-secondary-500 text-transparent bg-clip-text">
               Diana Benish
             </span>
           </h1>
           <h2 className="text-2xl md:text-3xl text-gray-400 mb-8">
-              Front-End Developer
+            Full-Stack Developer
           </h2>
+          
         </motion.div>
 
         <motion.p 
@@ -26,8 +27,9 @@ export default function HomeSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          I bring digital ideas to life. I create clean, thoughtful websites that are visually engaging and feel intuitive across all devices. My approach balances visual design with practical functionality, focusing on what truly matters to users.
-
+          I enjoy building web applications that feel natural to users - simple, clear, and thoughtfully designed.
+          Working with React, Node.js, Express, and MongoDB, I create full-stack solutions that balance clean, maintainable code with real - world usability.
+          My projects focus on intuitive UX, scalable structure, and delivering the kind of experience that helps users achieve what they came for - easily.
         </motion.p>
 
         <motion.div 
@@ -59,11 +61,19 @@ export default function HomeSection() {
         </motion.div>
 
         <motion.div 
-          className="text-gray-400"
+          className="text-gray-400 mb-12"
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
         >
           <ChevronDown className="w-8 h-8 mx-auto" />
+        </motion.div>
+
+        <motion.div 
+          className="profile-image flex justify-center"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
         </motion.div>
       </div>
     </section>
