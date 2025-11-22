@@ -36,31 +36,43 @@ export default function ProjectsSection() {
       id: 3,
       title: 'Volunteers in the Field Full Stack',
       description: 'Interactive platform connecting farmers with volunteers through dynamic mapping technology',
-      tags: ['React', 'Node.js', 'MongoDB', 'Material UI', 'Leaflet'],
+      tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Postman', 'Material UI', 'Leaflet'],
       imageUrl: '/images/volunteerProject.png',
       demoUrl: 'https://mitnadvimbil.netlify.app/',
       linkedinUrl: 'https://www.linkedin.com/posts/dianabenish_webdevelopment-fullstack-frontend-activity-7292822500390899714-BWV-'
     },
-        {
-      id: 4,
-      title: 'Enterior Design Landing Page',
-      description: 'A responsive frontend project featuring clean, aesthetic design for an interior designers website. This modern landing page emphasizes elegant visual presentation and smooth user experience',
-      tags: ['React', 'Typescript', 'CSS'],
-      imageUrl: '/images/landingPageMockup.PNG',
-      demoUrl: 'https://landingpagemc.netlify.app/',
-      linkedinUrl: 'https://www.linkedin.com/in/dianabenish/'
+     { id: 4,
+      title: 'Clearly - Skin Analysis & Personalized Skincare App',
+      description: `A three-month collaborative project with a team of 10 developers, 
+                    building an application that analyzes facial skin and provides 
+                    personalized product recommendations and skincare routines.
+                    Note: The codebase is private, but I'm happy to walk you through 
+                    the project in detail or share a demo video.`,
+      tags: ['HTML', 'SCSS', 'JavaScript', 'React'],
+      imageUrl: '/images/Clearly-mockap.png',
+      demoUrl: '/videos/Clearly_demo.mp4',
+      linkedinUrl: ''
+
     },
   {
      id: 5,
       title: 'Trip Vibe - Travel Booking Website',
       description: 'A single-page travel agency website showcasing destinations, packages, and travel services.',
       tags: ['HTML', 'CSS', 'Bootstrap'],
-      imageUrl: '/images/tripvibe.png', 
+      imageUrl: '/images/tripvibe.png',
       demoUrl: 'https://tripvibes.netlify.app/',
       linkedinUrl: 'https://www.linkedin.com/in/dianabenish/'
-  }
+  },
 
-     
+         {
+      id: 6,
+      title: 'Enterior Design Landing Page',
+      description: 'A responsive frontend project featuring clean, aesthetic design for an interior designers website. This modern landing page emphasizes elegant visual presentation and smooth user experience',
+      tags: ['React', 'Typescript', 'CSS'],
+      imageUrl: '/images/landingPageMockup.PNG',
+      demoUrl: 'https://landingpagemc.netlify.app/',
+      linkedinUrl: 'https://www.linkedin.com/in/dianabenish/'
+    }
   ]
 
   return (
@@ -71,7 +83,7 @@ export default function ProjectsSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px"  }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-100">
@@ -90,15 +102,21 @@ export default function ProjectsSection() {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-50px" }}
               className="bg-gray-800 rounded-xl overflow-hidden hover:shadow-lg hover:shadow-primary-500/10 transition-all duration-300 h-full flex flex-col"
+              style={{ minHeight: '500px' }} //minimum hight
             >
               {/* Project Image */}
-              <div className="relative group h-48 overflow-hidden">
+              <div className="relative group h-48 overflow-hidden"
+                  style={{ height: '200px' }}>
                 <img
                   src={project.imageUrl}
                   alt={project.title}
+                  loading="lazy" //  lazy loading
+                  width="400" 
+                  height="200" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  style={{ aspectRatio: '2/1' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                   <h3 className="text-xl font-semibold text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
