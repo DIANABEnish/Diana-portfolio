@@ -12,9 +12,20 @@ interface Project {
 }
 
 export default function ProjectsSection() {
-  const projects: Project[] = [
+   const projects: Project[] = [
+
+    
     {
       id: 1,
+      title: 'Cloud Storage Optimizer - Full Stack Analytics Platform',
+      description: 'A full-stack analytics platform that identifies storage waste and calculates cost savings. Features include duplicate detection via hash algorithms,automated old file identification, interactive data visualizations (Recharts), and sortable/filterable results. Includes Python & Node.js scripts for generating storage reports from local directories.',
+      tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Recharts', 'SCSS', 'Python', 'Axios'],
+      imageUrl: '/images/cloudStorageOptimizer.png',
+      demoUrl: 'https://cloudstorageoptimizer.netlify.app/',
+      linkedinUrl: 'https://www.linkedin.com/posts/dianabenish_webdevelopment-fullstack-frontend-activity-7409487101811015680-kq3a?utm_source=share&utm_medium=member_desktop&rcm=ACoAACwvBXIBC-ZJgfw5r_TMQz6ERSC4jgSmJ40'
+    },
+     {
+      id: 2,
       title: 'Sports Wear E-Commerce Platform',
       description: 'A sleek and responsive multipage sportswear website showcasing stylish and functional athletic apparel.',
       tags: ['TypeScript', 'HTML', 'SCSS', 'Responsive Design'],
@@ -22,16 +33,7 @@ export default function ProjectsSection() {
       demoUrl: 'https://elevatesport7.netlify.app/',
       linkedinUrl: 'https://www.linkedin.com/posts/dianabenish_webdevelopment-frontenddeveloper-javascriptprojects-activity-7304793911925903361-Gjoj'
     },
-    {
-      id: 2,
-      title: 'Amazon Clone E-Commerce Platform',
-      description: 'Amazon-inspired shopping platform with full purchase flow and order tracking',
-      tags: ['JavaScript', 'HTML5', 'CSS3', 'Responsive Design'],
-      imageUrl: '/images/amazonProject.png',
-      demoUrl: 'https://a-rivershop.netlify.app/amazon',
-      linkedinUrl: 'https://www.linkedin.com/posts/dianabenish_webdevelopment-frontenddeveloper-javascriptprojects-activity-7304793911925903361-Gjoj'
-    },
-    {
+     {
       id: 3,
       title: 'Volunteers in the Field Full Stack',
       description: 'Interactive platform connecting farmers with volunteers through dynamic mapping technology',
@@ -40,26 +42,8 @@ export default function ProjectsSection() {
       demoUrl: 'https://mitnadvimbil.netlify.app/',
       linkedinUrl: 'https://www.linkedin.com/posts/dianabenish_webdevelopment-fullstack-frontend-activity-7292822500390899714-BWV-'
     },
-    {
+     {
       id: 4,
-      title: 'Enterior Design Landing Page',
-      description: 'A responsive frontend project featuring clean, aesthetic design for an interior designers website. This modern landing page emphasizes elegant visual presentation and smooth user experience',
-      tags: ['React', 'Typescript', 'CSS'],
-      imageUrl: '/images/landingPageMockup.PNG',
-      demoUrl: 'https://landingpagemc.netlify.app/',
-      linkedinUrl: 'https://www.linkedin.com/in/dianabenish/'
-    },
-    {
-      id: 5,
-      title: 'Trip Vibe - Travel Booking Website',
-      description: 'A single-page travel agency website showcasing destinations, packages, and travel services.',
-      tags: ['HTML', 'CSS', 'Bootstrap'],
-      imageUrl: '/images/tripvibe.png',
-      demoUrl: 'https://tripvibes.netlify.app/',
-      linkedinUrl: 'https://www.linkedin.com/in/dianabenish/'
-    },
-    {
-      id: 6,
       title: 'Clearly - Skin Analysis & Personalized Skincare App',
       description: `A three-month collaborative project with a team of 10 developers, 
                     building an application that analyzes facial skin and provides 
@@ -70,9 +54,35 @@ export default function ProjectsSection() {
       imageUrl: '/images/Clearly-mockap.png',
       demoUrl: '/videos/Clearly_demo.mp4',
       linkedinUrl: ''
+    },
+    {
+      id: 5,
+      title: 'Enterior Design Landing Page',
+      description: 'A responsive frontend project featuring clean, aesthetic design for an interior designers website. This modern landing page emphasizes elegant visual presentation and smooth user experience',
+      tags: ['React', 'Typescript', 'CSS'],
+      imageUrl: '/images/landingPageMockup.PNG',
+      demoUrl: 'https://landingpagemc.netlify.app/',
+      linkedinUrl: 'https://www.linkedin.com/in/dianabenish/'
+    },
+    {
+      id: 6,
+      title: 'Trip Vibe - Travel Booking Website',
+      description: 'A single-page travel agency website showcasing destinations, packages, and travel services.',
+      tags: ['HTML', 'CSS', 'Bootstrap'],
+      imageUrl: '/images/tripvibe.png',
+      demoUrl: 'https://tripvibes.netlify.app/',
+      linkedinUrl: 'https://www.linkedin.com/in/dianabenish/'
+    },
+     {
+      id: 7,
+      title: 'Amazon Clone E-Commerce Platform',
+      description: 'Amazon-inspired shopping platform with full purchase flow and order tracking',
+      tags: ['JavaScript', 'HTML5', 'CSS3', 'Responsive Design'],
+      imageUrl: '/images/amazonProject.png',
+      demoUrl: 'https://a-rivershop.netlify.app/amazon',
+      linkedinUrl: 'https://www.linkedin.com/posts/dianabenish_webdevelopment-frontenddeveloper-javascriptprojects-activity-7304793911925903361-Gjoj'
     }
   ]
-
   // Container animation
   const containerVariants = {
     hidden: {},
