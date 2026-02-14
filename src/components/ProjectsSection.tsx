@@ -70,7 +70,7 @@ export default function ProjectsSection() {
       description: 'A single-page travel agency website showcasing destinations, packages, and travel services.',
       tags: ['HTML', 'CSS', 'Bootstrap'],
       imageUrl: '/images/tripvibe.png',
-      demoUrl: 'https://tripvibes.netlify.app/',
+      demoUrl: 'https://tripvvibe.netlify.app/',
       linkedinUrl: 'https://www.linkedin.com/in/dianabenish/'
     },
      {
