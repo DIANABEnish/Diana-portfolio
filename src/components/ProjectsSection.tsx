@@ -52,7 +52,7 @@ export default function ProjectsSection() {
                     the project in detail or share a demo video.`,
       tags: ['HTML', 'SCSS', 'JavaScript', 'React'],
       imageUrl: '/images/Clearly-mockap.png',
-      demoUrl: '/videos/Clearly_demo.mp4',
+      demoUrl: '/videos/CLEARLY_DEMO_VIDEO.mp4',
       linkedinUrl: ''
     },
     {
