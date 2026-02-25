@@ -25,6 +25,7 @@ export default function SkillsSection() {
       name: 'Backend & Databases',
       skills: [
         { name: 'Node.js', level: 80 },
+        { name: 'Next.js', level: 50 },
         { name: 'Express.js', level: 75 },
         { name: 'RESTful APIs', level: 80 },
         { name: 'MongoDB', level: 75 },
