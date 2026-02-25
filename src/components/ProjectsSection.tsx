@@ -12,7 +12,7 @@ interface Project {
 }
 
 export default function ProjectsSection() {
-   const projects: Project[] = [
+  const projects: Project[] = [
 
     
     {
@@ -20,7 +20,7 @@ export default function ProjectsSection() {
       title: 'Cloud Storage Optimizer - Full Stack Analytics Platform',
       description: 'A full-stack analytics platform that identifies storage waste and calculates cost savings. Features include duplicate detection via hash algorithms,automated old file identification, interactive data visualizations (Recharts), and sortable/filterable results. Includes Python & Node.js scripts for generating storage reports from local directories.',
       tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Recharts', 'SCSS', 'Python', 'Axios'],
-      imageUrl: '/images/cloudStorageOptimizer.png',
+      imageUrl: '/images/cloud-storage.png',
       demoUrl: 'https://cloudstorageoptimizer.netlify.app/',
       linkedinUrl: 'https://www.linkedin.com/posts/dianabenish_webdevelopment-fullstack-frontend-activity-7409487101811015680-kq3a?utm_source=share&utm_medium=member_desktop&rcm=ACoAACwvBXIBC-ZJgfw5r_TMQz6ERSC4jgSmJ40'
     },
@@ -29,7 +29,7 @@ export default function ProjectsSection() {
       title: 'Sports Wear E-Commerce Platform',
       description: 'A sleek and responsive multipage sportswear website showcasing stylish and functional athletic apparel.',
       tags: ['TypeScript', 'HTML', 'SCSS', 'Responsive Design'],
-      imageUrl: '/images/sportswearProject.png',
+      imageUrl: '/images/elevate-sport.png',
       demoUrl: 'https://elevatesport7.netlify.app/',
       linkedinUrl: 'https://www.linkedin.com/posts/dianabenish_webdevelopment-frontenddeveloper-javascriptprojects-activity-7304793911925903361-Gjoj'
     },
@@ -38,7 +38,7 @@ export default function ProjectsSection() {
       title: 'Volunteers in the Field Full Stack',
       description: 'Interactive platform connecting farmers with volunteers through dynamic mapping technology',
       tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Postman', 'Material UI', 'Leaflet'],
-      imageUrl: '/images/volunteerProject.png',
+      imageUrl: '/images/Mitnadvim.png',
       demoUrl: 'https://mitnadvimbil.netlify.app/',
       linkedinUrl: 'https://www.linkedin.com/posts/dianabenish_webdevelopment-fullstack-frontend-activity-7292822500390899714-BWV-'
     },
@@ -51,7 +51,7 @@ export default function ProjectsSection() {
                     Note: The codebase is private, but I'm happy to walk you through 
                     the project in detail or share a demo video.`,
       tags: ['HTML', 'SCSS', 'JavaScript', 'React'],
-      imageUrl: '/images/Clearly-mockap.png',
+      imageUrl: '/images/clearly (2).png',
       demoUrl: '/videos/CLEARLY_DEMO_VIDEO.mp4',
       linkedinUrl: ''
     },
@@ -60,7 +60,7 @@ export default function ProjectsSection() {
       title: 'Enterior Design Landing Page',
       description: 'A responsive frontend project featuring clean, aesthetic design for an interior designers website. This modern landing page emphasizes elegant visual presentation and smooth user experience',
       tags: ['React', 'Typescript', 'CSS'],
-      imageUrl: '/images/landingPageMockup.PNG',
+      imageUrl: '/images/interiorDesign.png',
       demoUrl: 'https://landingpagemc.netlify.app/',
       linkedinUrl: 'https://www.linkedin.com/in/dianabenish/'
     },
@@ -69,7 +69,7 @@ export default function ProjectsSection() {
       title: 'Trip Vibe - Travel Booking Website',
       description: 'A single-page travel agency website showcasing destinations, packages, and travel services.',
       tags: ['HTML', 'CSS', 'Bootstrap'],
-      imageUrl: '/images/tripvibe.png',
+      imageUrl: '/images/trip-vibe.png',
       demoUrl: 'https://tripvvibe.netlify.app/',
       linkedinUrl: 'https://www.linkedin.com/in/dianabenish/'
     },
@@ -78,11 +78,12 @@ export default function ProjectsSection() {
       title: 'Amazon Clone E-Commerce Platform',
       description: 'Amazon-inspired shopping platform with full purchase flow and order tracking',
       tags: ['JavaScript', 'HTML5', 'CSS3', 'Responsive Design'],
-      imageUrl: '/images/amazonProject.png',
+      imageUrl: '/images/amazonClone.png',
       demoUrl: 'https://a-rivershop.netlify.app/amazon',
       linkedinUrl: 'https://www.linkedin.com/posts/dianabenish_webdevelopment-frontenddeveloper-javascriptprojects-activity-7304793911925903361-Gjoj'
-    }
+    },
   ]
+
   // Container animation
   const containerVariants = {
     hidden: {},
@@ -93,18 +94,17 @@ export default function ProjectsSection() {
     }
   }
 
-  // Card animation - translateY + opacity (לא scale!)
   const cardVariants = {
     hidden: { 
       opacity: 0,
-      y: 30 // מתחיל 30px למטה
+      y: 30 
     },
     visible: { 
       opacity: 1,
-      y: 0, // חוזר למקום
+      y: 0, 
       transition: {
         duration: 0.6,
-        ease: [0.25, 0.1, 0.25, 1] // easing חלק
+        ease: [0.25, 0.1, 0.25, 1] 
       }
     }
   }
@@ -149,7 +149,7 @@ export default function ProjectsSection() {
               <div 
                 className="relative group overflow-hidden bg-gray-700"
                 style={{ 
-                  height: '220px',
+                  height: '250px',
                   minHeight: '220px',
                   flexShrink: 0
                 }}
@@ -225,3 +225,4 @@ export default function ProjectsSection() {
     </section>
   )
 }
+
